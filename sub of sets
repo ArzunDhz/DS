@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main() {
+
+int a[5]={1,2,3,4,7};
+int b[5]={1,2,3,6,9};
+int counter;
+
+for(int i=0 ;i!=5;i++ ){
+counter=0 ;
+
+for(int j=0; j!=5 && counter!=1;j++){
+if(a[i]==b[j]){
+  counter++;
+}
+}
+if(counter==0){
+cout<<a[i]<<", ";
+
+} 
+}
+}
