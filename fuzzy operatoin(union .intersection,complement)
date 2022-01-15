@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   float  a[10]={0.7,0.4,0};
+   float  b[10]={0.7,0.8,1};
+   int i ,j;
+   cout<<"AuB = ";
+   for(i=0;i!=3;i++){
+ if(a[i]>b[i]){
+     cout<<"( x"<<i+1<<", "<<a[i]<<")";
+ }
+ else{
+    cout<<"( x"<<i+1<<", "<<b[i]<<")";
+ }
+   }
+
+cout<<"\nAnB = ";
+for(i=0;i!=3;i++){
+ if(a[i]<b[i]){
+     cout<<"( x"<<i+1<<", "<<a[i]<<")";
+ }
+ else{
+    cout<<"( x"<<i+1<<", "<<b[i]<<")";
+ }
+   }
+
+
+
+
+   cout<<"\n(AnB)~ =";
+   for(i=0;i!=3;i++){
+     if(a[i]<b[i]){
+     cout<<"( x"<<i+1<<", "<<1-a[i]<<")";
+ }
+  else{
+    cout<<"( x"<<i+1<<", "<<1-b[i]<<")";
+ }
+   }
+
+
+   cout<<"\n(AuB)~ =";
+   for(i=0;i!=3;i++){
+    if(a[i]>b[i]){
+     cout<<"( x"<<i+1<<", "<<1-a[i]<<")";
+ }
+  else{
+    cout<<"( x"<<i+1<<", "<<1-b[i]<<")";
+ }
+   }
+
+
+}
