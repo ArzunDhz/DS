@@ -1,0 +1,12 @@
+#include<iostream>
+#include<cmath>
+ int main()
+{
+cout<<"alu khau hawa"
+float a ; 
+cout<<"a ko value hala hawa point wala";
+cin>>a;
+cout>>floor(a);
+cout>>ceil(a);
+
+}
