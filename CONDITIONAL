@@ -1,0 +1,156 @@
+_________________________________________________P->Q=~Q->~P__________________________________
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+char P[4]={'T','T','F','F'};
+char Q[4]={'T','F','T','F'};
+cout<<"\n";
+cout<<"Conditional"<<endl;
+cout<<"P"<<'\t'<<"Q"<<'\t'<<"P->Q"<<endl;
+
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'&&Q[i]=='F')
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+    else
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+}
+
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'){
+        P[i]='F';
+    }
+    else
+        P[i]='T';
+
+
+}
+for(int i=0;i<4;i++){
+
+    if(Q[i]=='T'){
+        Q[i]='F';
+    }
+    else
+        Q[i]='T';
+}
+
+
+cout<<"~Q"<<'\t'<<"~P"<<'\t'<<"~Q->~P__________________________________"<<endl;
+for(int i=0;i<4;i++){
+
+   if(P[i]=='T'&&Q[i]=='F')
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+    else
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+}
+
+
+}
+*/
+
+_________________________________________________P<->Q = (P ^ Q) V (~P ^ ~Q ) __________________________________
+
+
+
+/*
+int main(){
+
+char P[4]={'T','T','F','F'};
+char Q[4]={'T','F','T','F'};
+
+
+cout<<"P"<<'\t'<<"Q"<<'\t'<<"P<->Q"<<endl;
+for(int i=0;i<4;i++){
+
+    if(P[i]==Q[i])
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+    else
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+}
+
+char R[4]={};
+
+cout<<"P"<<'\t'<<"Q"<<'\t'<<"P ^ Q"<<endl;
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'&&Q[i]=='T'){
+
+        R[i]='T';
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+
+    }
+
+
+    else{
+              R[i]='F';
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+    }
+}
+
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'){
+        P[i]='F';
+    }
+    else
+        P[i]='T';
+
+
+}
+for(int i=0;i<4;i++){
+
+    if(Q[i]=='T'){
+        Q[i]='F';
+    }
+    else
+        Q[i]='T';
+}
+
+char S[4]={};
+cout<<"P"<<'\t'<<"Q"<<'\t'<<"~P ^ ~Q"<<endl;
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'&&Q[i]=='T'){
+
+        S[i]='T';
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+
+    }
+
+
+    else{
+              S[i]='F';
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+    }
+}
+
+
+cout<<"P^Q"<<'\t'<<"~P ^~Q"<<'\t'<<" (P ^ Q ) V ( ~P ^ ~Q)"<<endl;
+
+
+for(int i=0;i<4;i++){
+
+   if(S[i]=='F'&&R[i]=='F'){
+
+
+        cout<<S[i]<<'\t'<<R[i]<<'\t'<<'F'<<endl;
+
+    }
+
+
+    else{
+
+        cout<<S[i]<<'\t'<<R[i]<<'\t'<<'T'<<endl;
+    }
+}
+
+
+
+
+
+}
+*/
