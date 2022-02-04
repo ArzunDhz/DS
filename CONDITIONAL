@@ -507,6 +507,69 @@ if(C[i]=='F'&&D[i]=='F'){
 
 
 
+************************************************************  C > (P V Q) ->(P->Q)  ************************************************************
+#include<iostream>
 
+using namespace std;
+
+int main(){
+
+char P[4]={'T','T','F','F'};
+char Q[4]={'T','F','T','F'};
+
+
+
+char D[8]={};
+cout<<"\nP "<<'\t'<<"Q"<<'\t'<<"P V Q"<<endl;
+for(int i=0;i<8;i++){
+
+    if(P[i]=='T'&&Q[i]=='T'){
+
+
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+        D[i]='T';
+    }
+
+
+    else{
+            D[i]='F';
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+    }
+}
+
+
+cout<<"P"<<'\t'<<"Q"<<'\t'<<"P->Q"<<endl;
+
+char C[8]={};
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'&&Q[i]=='F'){
+         cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+        C[i]='F';
+
+    }
+
+    else{
+      cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+        C[i]='T';
+    }
+
+}
+
+
+cout<<"P V Q"<<'\t'<<"P->Q"<<'\t'<<"(P V Q) ->(P->Q)"<<endl;
+
+
+for(int i=0;i<4;i++){
+
+    if(D[i]=='T'&&C[i]=='F')
+        cout<<D[i]<<'\t'<<C[i]<<'\t'<<'F'<<endl;
+
+    else
+        cout<<D[i]<<'\t'<<C[i]<<'\t'<<'T'<<endl;
+
+}
+
+}
 
 
