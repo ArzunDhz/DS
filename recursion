@@ -1,0 +1,127 @@
+________________________________factorial_________________
+
+#include<iostream>
+    using namespace std;
+
+    int fact(int n){
+
+    if(n==1)
+        return  n;
+    else
+        return n*fact(n-1);
+
+    }
+
+    int main(){
+        int n ;
+    cout<<"input any number = ";
+    cin>>n;
+    cout<<fact(n);
+
+    }
+
+
+
+________________________________fubonachi_________________
+
+#include<iostream>
+    using namespace std;
+    int fubu(int n);
+    int main(){
+        int n ;
+    cout<<"input any number = ";
+    cin>>n;
+    for(int i=0; i<n ; i++){
+
+    cout<<fubu(i);
+
+    }
+
+    }
+
+    int fubu(int n){
+    if(n==0||n==1){
+        return n ;
+    }
+    else{
+        return fubu(n-1)+fubu(n-2);
+    }
+
+
+    }
+
+
+*/
+________________________-sum of natural number___________________________________
+#include<iostream>
+using namespace std;
+
+
+  int nat(int n){
+
+    if(n==1)
+        return  1;
+    else
+        return n + nat(n-1);
+
+    }
+
+    int main(){
+        int n ;
+    cout<<"input any number = ";
+    cin>>n;
+    cout<<nat(n);
+
+    }
+
+
+
+
+________________________sum of 2^3___________________________________
+#include<iostream>
+using namespace std;
+
+
+  int even(int a, int n){
+
+    if(n==0)
+        return  1;
+    else
+        return a * even(a, n-1);
+
+    }
+
+    int main(){
+        int a,b ;
+    cout<<"input any number = ";
+    cin>>a;
+    cout<<"input power = ";
+    cin>>b;
+    cout<<even(a,b);
+
+    }
+
+___________sum of n even number________________
+#include<iostream>
+using namespace std;
+
+
+  int nat(int n){
+
+    if(n==1)
+        return 1;
+    else
+        return n + nat(n-1);
+
+    }
+
+    int main(){
+        int n ;
+    cout<<"input any number = ";
+    cin>>n;
+    cout<<nat(n);
+
+    }
+
+_________________________
+
