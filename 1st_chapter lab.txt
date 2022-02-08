@@ -1,0 +1,209 @@
+_________ceil n floor________________
+
+
+#include<iostream>
+#include<cmath>
+
+
+ int main()
+{
+float a ; 
+cout>>"a ?";
+cin>>a;
+cout>>floor(a);
+cout>>ceil(a);
+
+}
+
+________fuzzy operatoin(union,intersection,complement__________________
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   float  a[10]={0.7,0.4,0};
+   float  b[10]={0.7,0.8,1};
+   int i ,j;
+   cout<<"AuB = ";
+   for(i=0;i!=3;i++){
+ if(a[i]>b[i]){
+     cout<<"( x"<<i+1<<", "<<a[i]<<")";
+ }
+ else{
+    cout<<"( x"<<i+1<<", "<<b[i]<<")";
+ }
+   }
+
+cout<<"\nAnB = ";
+for(i=0;i!=3;i++){
+ if(a[i]<b[i]){
+     cout<<"( x"<<i+1<<", "<<a[i]<<")";
+ }
+ else{
+    cout<<"( x"<<i+1<<", "<<b[i]<<")";
+ }
+   }
+
+
+
+
+   cout<<"\n(AnB)~ =";
+   for(i=0;i!=3;i++){
+     if(a[i]<b[i]){
+     cout<<"( x"<<i+1<<", "<<1-a[i]<<")";
+ }
+  else{
+    cout<<"( x"<<i+1<<", "<<1-b[i]<<")";
+ }
+   }
+
+
+   cout<<"\n(AuB)~ =";
+   for(i=0;i!=3;i++){
+    if(a[i]>b[i]){
+     cout<<"( x"<<i+1<<", "<<1-a[i]<<")";
+ }
+  else{
+    cout<<"( x"<<i+1<<", "<<1-b[i]<<")";
+ }
+   }
+
+
+}
+
+________________intersetion____________
+#include <iostream>
+using namespace std;
+int main() {
+
+int a[4]={1,2,3,4};
+int b[5]={1,2,3,6,9};
+cout<<"AnB = ";
+for(int i =0 ; i!=4;i++){
+for(int j=0 ; j!=5;j++){
+  if(a[i]==b[j]){
+    cout<<a[i]<<"\t";;
+  }
+
+}
+}
+
+
+
+} 
+_________________product of set______
+#include <iostream>
+using namespace std;
+int main() {
+
+int a[5]={1,2,3,4,7};
+int b[5]={1,2,3,6,9};
+int counter;
+
+for(int i=0 ;i!=5;i++ ){
+
+
+for(int j=0; j!=5;j++){
+
+cout<<"("<<a[i]<<","<<b[j]<<")";
+
+} 
+}
+}
+
+
+____________________subtraction of sets_______________
+#include <iostream>
+using namespace std;
+int main() {
+
+int a[5]={1,2,3,4,7};
+int b[5]={1,2,3,6,9};
+int counter;
+
+for(int i=0 ;i!=5;i++ ){
+counter=0 ;
+
+for(int j=0; j!=5 && counter!=1;j++){
+if(a[i]==b[j]){
+  counter++;
+}
+}
+if(counter==0){
+cout<<a[i]<<", ";
+
+} 
+}
+}
+
+________________________union__________
+#include <iostream>
+using namespace std;
+int main() {
+
+int a[4]={1,2,3,4};
+int b[5]={1,2,3,6,9};
+int e[10];
+int c=4; 
+int d=5;
+int i ,j ;
+int f=c;
+int temp=0;
+  
+  int counter = 0 ; 
+
+  
+  for(int i = 0; i!=5;i++){
+   e[i]=a[i]; 
+  }
+
+for(int i=0 ;i!=d;i++ ){
+counter=0 ;
+
+for(int j=0; j!=c && counter!=1;j++){
+if(b[i]==a[j]){
+  counter=1;
+}
+if(counter!=1){
+  e[f++]=b[i];
+}
+
+}
+}
+
+for(int i =0 ; i!=f;i++){
+for(int j=i+1 ; j!=f;j++){
+  if(e[i]==e[j]){
+    e[i]=0;
+  }
+
+}
+}
+
+
+for(i=0;i<f;i++)
+	{		
+		for(j=i+1;j<f;j++)
+		{
+			if(e[i]==0)
+			{
+				temp =e[i];
+				e[i]=e[j];
+				e[j]=temp;
+			}
+		}
+	}
+
+	cout<<" A u B = {";
+for(int i =0 ; i!=f;i++){
+
+  while(e[i]!=0){
+    cout<<e[i]<<", ";
+i++;
+  }
+}
+cout<<"}";
+
+} 
