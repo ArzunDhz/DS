@@ -126,4 +126,84 @@ using namespace std;
     cout<<even(n);
 
     }
+    
+    
+    
+    
+
+/*_________________________1 +2 +3 +. . .. n_________
+
+#include <iostream>
+
+using namespace std;
+
+
+
+int main()
+
+{
+    int n;
+    int b=0 ;
+cin>>n;
+    for (int i = 1 ; i<= n ; i++){
+        cout<<i;
+         if(i<n){
+    cout<<"+";
+ }
+
+        b+= i ;
+
+    }
+    cout<<"\n"<<b;
+}
+
+
+*/
+
+
+_/*_________________________1^2 +2^2 +3^2 +. . .. n^2_________*/
+int main()
+
+{
+    int n;
+    int b=0 ;
+cin>>n;
+    for (int i = 1 ; i< n ; i++){
+        cout<<i<<"^2  ";
+    if(i<n){
+    cout<<"+";
+ }
+        b+= i*i ;
+
+    }
+    cout<<"\n"<<b;
+}
+
+
+_/*________________________________________________1! +2! +3! +. . .. n!_________
+{
+    int n;
+    int b=0 ;
+    int sum = 0 ;
+    int fact=1;
+cin>>n;
+    for (int i = 1 ; i<= n ; i++){
+        cout<<i<<"!";
+ if(i<n){
+    cout<<"+";
+ }
+    for(int j=1;j<=i;j++){
+      fact=fact*j;
+
+  }
+
+
+  sum +=fact;
+  fact = 1;
+
+    }
+    cout<<"\n"<<sum;
+}
+*/
+
 
