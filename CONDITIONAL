@@ -1,3 +1,163 @@
+/*
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a[40], b[40];
+    int sum[10], i, n, carry=0;
+     cout << "enter any no :";
+     cin >> n;
+     cout << "enter set A :";
+     for (i = 0; i < n; i++)
+     {
+         cin >> a[i];
+     }
+     cout << "enter set b :";
+     for (i = 0; i < n; i++)
+     {
+         cin >> b[i];
+     }
+
+    int c=1;
+    for (int j = (n-1); j >= 0; j--)
+    {
+        sum[c++] = (a[j] + b[j] + carry ) % 2;
+        carry = (a[j] + b[j] + carry) / 2;
+    }
+
+    sum[0] = carry;
+    for (i = 0; i < c; i++)
+    {
+        cout << sum[i];
+    }
+    return 0;
+}
+*/
+
+
+
+
+//_____________________________conditional______
+/*
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+char P[4]={'T','T','F','F'};
+char Q[4]={'T','F','T','F'};
+cout<<"\n";
+cout<<"Conditional"<<endl;
+cout<<"P"<<'\t'<<"Q"<<'\t'<<"P->Q"<<endl;
+
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'&&Q[i]=='F')
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+    else
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+}
+
+*/
+
+//_____________________________BIconditional______
+/*
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+char P[4]={'T','T','F','F'};
+char Q[4]={'T','F','T','F'};
+cout<<"\n";
+cout<<"BIConditional"<<endl;
+cout<<"P"<<'\t'<<"Q"<<'\t'<<"P<->Q"<<endl;
+
+for(int i=0;i<4;i++){
+
+    if(P[i]==Q[i])
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+    else
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+}
+}
+
+*/
+//_____________________________CONVERSE______
+/*
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+char P[4]={'T','T','F','F'};
+char Q[4]={'T','F','T','F'};
+cout<<"\n";
+cout<<"CONVERSE"<<endl;
+cout<<"P"<<'\t'<<"Q"<<'\t'<<"Q->P"<<endl;
+
+for(int i=0;i<4;i++){
+
+
+    if(P[i]=='F'&&Q[i]=='T')
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+    else
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+}
+}
+*/
+
+//_______________________________INVERSE_______
+
+/*
+#include<iostream>
+
+using namespace std;
+
+int main(){
+
+char P[4]={'T','T','F','F'};
+char Q[4]={'T','F','T','F'};
+cout<<"\n";
+cout<<"INVERSE"<<endl;
+cout<<"~P"<<'\t'<<"~Q"<<'\t'<<"~P->~Q"<<endl;
+
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'){
+        P[i]='F';
+    }
+    else
+        P[i]='T';
+
+
+}
+for(int i=0;i<4;i++){
+
+    if(Q[i]=='T'){
+        Q[i]='F';
+    }
+    else
+        Q[i]='T';
+}
+
+for(int i=0;i<4;i++){
+
+    if(P[i]=='T'&&Q[i]=='F')
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'F'<<endl;
+    else
+        cout<<P[i]<<'\t'<<Q[i]<<'\t'<<'T'<<endl;
+
+}
+}
+
+*/
+
 _________________________________________________P->Q=~Q->~P__________________________________
 #include<iostream>
 
