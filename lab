@@ -1,0 +1,79 @@
+///////////////////////////////////////////////////modular exp/////////////////////////////
+
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int b, n, m, x =1, a[10], i, k=0;
+    int power;
+
+    // input part
+    cout<< "Enter base: ";
+    cin>> b;
+
+    cout<< "Enter power raised: ";
+    cin>> n;
+
+    cout<< "Enter modular value: ";
+    cin>> m;
+
+    power =  b % m;
+
+    // converting value of n to binary
+    for(i=0; n>0; i++)
+    {
+        a[i]=n%2;
+        n= n/2;
+        k++;
+    }
+
+    // getting value of x
+    for(i=0; i<k; i++)
+    {
+        if (a[i] == 1)
+        {
+            x = (x * power) % m;
+            power = (power * power) % m;
+        }
+
+        else
+            power = (power * power) % m;
+    }
+
+    // x is the result of modular expansion (b^n mod m)
+    cout<< x;
+
+    return 0;
+}
+
+
+///////////////////////////////////////eculedian/////////////////////////////////////////
+
+
+#include <iostream>
+using namespace std;
+int main()
+{
+    int a,b,x,y,r;
+
+    cout<<"Enter two numbers: ";
+    cin>>a >>b;
+
+        x = a;
+        y = b;
+
+
+    while(y!=0){
+
+        r=x%y;
+        x=y;
+        y=r;
+    }
+
+    cout<<"GCD = "<<x;
+
+    return 0;
+}
+
+
